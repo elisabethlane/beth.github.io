@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+  <head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>PACS-Dataset</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/vendor.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../static/js/modernizr.js"></script>
+    <script src="../static/js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+  </head>
+
+  <body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+      <nav class="header-nav-wrap">
+        <ul class="header-nav">
+            <li><a href="../index.html#home" title="home">Home</a></li>
+            <li><a href="../index.html#about" title="about">Curriculum Vitae</a></li>
+            <li><a href="../index.html#works" title="works">Projects</a></li>
+            <li class="current"><a href="../index.html#blog" title="blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+    <article class="blog-single">
+
+      <!-- page header/blog hero
+      ================================================== -->
+      <div class="page-header page-header--single page-hero" style="background-image:url(../static/images/background.jpg)">
+
+        <div class="row page-header__content narrow">
+          <article class="col-full">
+            <div class="page-header__info">
+              <div class="page-header__cat">
+                <a href="#0">Datasets</a><a href="#0">Regression</a>
+              </div>
+            </div>
+            <h1 class="page-header__title">
+              <a href="#0" title="">
+                  A4C PACS-Dataset for Echocardiographic Phase Detection
+              </a>
+            </h1>
+            <ul class="page-header__meta">
+              <li class="date">November 9, 2021</li>
+              <li class="author">
+                  By
+                  <span>Beth Lane</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+      </div> <!-- end page-header -->
+
+      <div class="row blog-content">
+        <div class="col-full blog-content__main">
+          <p class="lead">Acquisition of high-quality, ethically approved medical imaging datasets for the training and testing of Deep Learning networks remains a challenge due to several contributing factors. These include, but are not limited to, time and cost constraints of both researchers and health service professionals. Moreover, a lack of dataset sharing amongst the research community makes the direct comparison of published results difficult.</p>
+          <p>My 2021 study titled <b><a href="#" onclick='window.open("../static/docs/phase_detection.pdf");return false;' download="Multibeat Echocardiographic Phase Detection Using Deep Neural Networks">“Multibeat Echocardiographic Phase Detection Using Deep Neural Networks”</a></b> presents an automated model capable of identifying multiple end-systolic and end-diastolic frames in apical four chamber view (A4C) echocardiographic videos of arbitrary length. The network performance on multi-centre data is indistinguishable from that of human experts, with significantly shorter processing time.<p>
+          <p>Three datasets were used in this study, 1 for training & testing and the others for testing only so as to assess the generalisability of the architecture.</P>
+          <p> The datasets are:</p>
+
+          <ul>
+            <li><b>PACS-dataset:</b> 1,000 videos aquired using Philips Healthcare (iE33 xMATRIX) from NHS Trust PACS Archives, Imperial College Healthcare, London </li>
+            <li><b>MultiBeat-dataset:</b> 40 videos of 10 beats in length aquired using GE Healthcare (Vivid.i) and Philips Healthcare (iE33 xMATRIX) from St Mary’s Hospital, London  </li>
+            <li><b>EchoNet-dataset:</b> 10,030 videos aquired using Siemens Healthineers (Acuson SC2000) and Philips Healthcare (iE33, Epiq 5G, Epiq 7C) publicly available from Stanford University Hospital</li>
+          </ul>
+
+          <p>It is with great pleasure that I, and my fellow researchers, are able to make the PACS-dataset available for the benefit of the research community. To read more about the study and datasets, please click on the button below:</p>
+
+          <div class="text-center">
+             <a href="../projects/phase_detection.html" class="btn btn--primary">
+                 Request access to the PACS-Dataset
+             </a>
+         </div>
+
+         <br>
+         <p>Additionally, I have published the code and trained network weights, thereby providing a benchmark for future studies and allowing for external validation of the approach. To access, please click the button below:</p>
+
+        <div class="text-center">
+           <a href="https://github.com/elisabethlane/EchoPhaseDetection" class="btn btn--primary">
+               GitHub repository
+           </a>
+        </div>
+
+        <br>
+        <p>Finally, to request access to the publicly available EchoNet-dataset, please click below:</p>
+
+        <div class="text-center">
+          <a href="https://echonet.github.io/dynamic" class="btn btn--primary">
+              EchoNet-dataset GitHub repository
+          </a>
+        </div>
+
+        <p class="blog-content__tags">
+            <span>Post Tags</span>
+
+            <span class="blog-content__tag-list">
+                <a href="#0">Datasets</a>
+                <a href="#0">Deep Learning</a>
+                <a href="#0">Echocardiography</a>
+                <a href="#0">Phase Detection</a>
+            </span>
+          </p>
+
+          <div class="blog-content__pagenav">
+              <div class="blog-content__nav">
+                  <div class="blog-content__prev">
+                      <a href="#0" rel="prev">
+                          <span>Previous Post</span>
+                          Coming soon...
+                      </a>
+                  </div>
+                  <div class="blog-content__next">
+                      <a href="#0" rel="next">
+                          <span>Next Post</span>
+                          Coming soon...
+                      </a>
+                  </div>
+              </div>
+
+              <div class="blog-content__all">
+                  <a href="../index.html#blog" class="btn btn--primary">
+                      View All Posts
+                  </a>
+              </div>
+
+            </div>
+          </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+            <div class="row">
+                <div class="col-full">
+
+                    <div class="footer-logo">
+                        <a class="footer-site-logo" href="../index.html"><img src="../static/images/icon.png" alt="Homepage"></a>
+                    </div>
+
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#" onclick='window.open("https://www.linkedin.com/in/beth-lane/");return false;'><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick='window.open("https://github.com/elisabethlane");return false;'><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick='window.open("https://scholar.google.com/citations?user=lIVUuT8AAAAJ");return false;'><i class="im im-pencil" aria-hidden="true"></i><span>Google Scholar</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </footer> <!-- end footer -->
+
+
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+
+
+        <!-- Java Script
+        ================================================== -->
+        <script src="../static/js/jquery-3.2.1.min.js"></script>
+        <script src="../static/js/plugins.js"></script>
+        <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

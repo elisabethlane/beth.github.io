@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
+
 <html class="no-js" lang="en">
-<!--<![endif]-->
 
 <head>
 
-    <!--- basic page needs
-    ================================================== -->
     <meta charset="utf-8">
     <title>Elisabeth Lane</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- mobile specific metas
-    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/vendor.css">
+    <link rel="stylesheet" href="static/css/main.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="static/js/modernizr.js"></script>
+    <script src="static/js/pace.min.js"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
@@ -58,19 +52,20 @@
 
    <!-- home
    ================================================== -->
-   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/background.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="static/images/background.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+     <div class="overlay"></div>
+      <div class="shadow-overlay"></div>
 
         <div class="home-content">
-
+          <div class="container">
             <div class="row home-content__main">
 
+              <div class="col">
                 <h1 style="font-size:6vw"> Elisabeth Lane <br> </h1>
-
                 <h1 style="font-size:2vw">PhD Candidate | Machine Learning | Computer Vision</h1>
+              </div>
 
+              <div class="col">
                 <div class="home-content__buttons">
                     <a href="#works" class="smoothscroll btn btn--stroke">
                         Project Portfolio
@@ -79,27 +74,28 @@
                         Curriculum Vitae
                     </a>
                 </div>
+              </div>
 
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
+              <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                  <span>Scroll Down</span>
+                </a>
+              </div>
 
             </div>
-
+          </div>
         </div> <!-- end home-content -->
 
         <ul class="home-social">
-            <li>
-                <a href="#" onclick='window.open("https://www.linkedin.com/in/beth-lane/");return false;'><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
-            </li>
-            <li>
-                <a href="#" onclick='window.open("https://github.com/elisabethlane");return false;'><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
-            </li>
-            <li>
-                <a href="#" onclick='window.open("https://scholar.google.com/citations?user=lIVUuT8AAAAJ");return false;'><i class="im im-pencil" aria-hidden="true"></i><span>Google Scholar</span></a>
-            </li>
+          <li>
+            <a href="#" onclick='window.open("https://www.linkedin.com/in/beth-lane/");return false;'><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+          </li>
+          <li>
+            <a href="#" onclick='window.open("https://github.com/elisabethlane");return false;'><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
+          </li>
+          <li>
+            <a href="#" onclick='window.open("https://scholar.google.com/citations?user=lIVUuT8AAAAJ");return false;'><i class="im im-pencil" aria-hidden="true"></i><span>Google Scholar</span></a>
+          </li>
         </ul>
         <!-- end home-social -->
 
@@ -110,313 +106,380 @@
     ================================================== -->
     <section id="about" class="s-about target-section">
 
-        <div class="row section-intro has-bottom-sep">
-            <div class="col-full text-center">
-                <h1>Elisabeth Lane</h1>
-                <img class="cv_pic" src="images\profile.jfif" alt="Profile picture">
-                <h3>Curriculum Vitae</h3>
-                <br>
-                <p class="lead">24 months’ research experience in the field of Machine Learning and Computer Vision for medical imaging. Proven success in solving complex
-                  problems; applying Deep Learning methods to produce accurate, reproducible algorithms for human task automation. Research published in
-                  well‐regarded Academic journals and findings presented at Medical Imaging with Deep Learning (MIDL) conference, 2021. Adept at building data
-                  processing pipelines, knowledge of Python and Tensorflow programming, network training and optimisation, visualisation and analysis of results.
-                  Passionate about research and building Machine Learning solutions beyond the state‐of‐the‐art. Excellent communication, teamwork and English skills.</p>
-            </div>
+      <div class="row section-intro ">
+        <div class="col-full text-center">
+          <h1>Elisabeth Lane</h1>
+          <img class="cv_pic" src="static/images/profile.jfif" alt="Profile picture">
+          <h3>Curriculum Vitae</h3>
+          <br>
+          <p class="lead">24 months’ research experience in the field of Machine Learning and Computer Vision for medical imaging. Proven success in solving complex
+            problems; applying Deep Learning methods to produce accurate, reproducible algorithms for human task automation. Research published in
+            well‐regarded Academic journals and findings presented at Medical Imaging with Deep Learning (MIDL) conference, 2021. Adept at building data
+            processing pipelines, knowledge of Python and Tensorflow programming, network training and optimisation, visualisation and analysis of results.
+            Passionate about research and building Machine Learning solutions beyond the state‐of‐the‐art. Excellent communication, teamwork and English skills.</p>
         </div>
+      </div>
 
-        <div class="row key-skills has-bottom-sep">
-          <div class="col-full">
-                <h1>Key Skills</h1>
-                <p class="skills">Machine Learning Algorithms • Computer Science Fundamentals • Data Visualisation • Data structures • Algorithmic Design
+      <div class="horizontal">
+        <hr class="mx-auto">
+      </div>
+
+      <div class="row key-skills">
+        <div class="col-full">
+          <h1>Key Skills</h1>
+            <p class="skills">Machine Learning Algorithms • Computer Science Fundamentals • Data Visualisation • Data structures • Algorithmic Design
                   •Dissemination of Results • Academic Writing • Presenting • Training & Mentoring • Teamwork</p>
-          </div>
+        </div>
+      </div>
+
+      <div class="horizontal">
+        <hr class="mx-auto">
+      </div>
+
+      <div class="row technical-skills">
+          <h1>Technical Skills</h1>
+          <ul>
+            <li><b>Tools:</b> <p>Python, Tensorflow, Keras, Anaconda, Linux, SQLAlchemy, Google Colaboratory, Jupyter Notebook, Spyder, Docker<p></li>
+            <li><b>Packages:</b> <p>NumPy, SciPy, scikit‐learn, Pandas, Matplotlib, PIL, Open‐CV, ffmpeg, Imgaug, Flask, Jinja2</p></li>
+            <li><b>Statistical & Machine Learning:</b> <p>Model development, Transfer learning, Performance optimisation, Supervised & unsupervised learning,
+              Data pre‐ and post‐processing, Visualisation, Regression, Clustering & Classification, Segmentation, Object detection, Key point localisa‐
+              tion, Quantitative analysis: Bland‐Altman, Confusion matrix, Statistical variability analysis</p></li>
+          </ul>
         </div>
 
-        <div class="row technical-skills has-bottom-sep">
-          <div>
-                <h1>Technical Skills</h1>
-                <ul>
-                  <li><b>Tools:</b> <p>Python, Tensorflow, Keras, Anaconda, Linux, SQLAlchemy, Google Colaboratory, Jupyter Notebook, Spyder, Docker<p></li>
-                  <li><b>Packages:</b> <p>NumPy, SciPy, scikit‐learn, Pandas, Matplotlib, PIL, Open‐CV, ffmpeg, Imgaug, Flask, Jinja2</p></li>
-                  <li><b>Statistical & Machine Learning:</b> <p>Model development, Transfer learning, Performance optimisation, Supervised & unsupervised learning,
-                    Data pre‐ and post‐processing, Visualisation, Regression, Clustering & Classification, Segmentation, Object detection, Key point localisa‐
-                    tion, Quantitative analysis: Bland‐Altman, Confusion matrix, Statistical variability analysis</p></li>
-                  </ul>
-          </div>
+        <div class="horizontal">
+          <hr class="mx-auto">
         </div>
 
-        </div> <!-- end about-content -->
+        <div class="row about-content about-content--timeline education ">
+          <div class="col-full text-center">
+            <h3>Education</h3>
+          </div>
 
-        <div class="row about-content about-content--timeline education has-bottom-sep">
+          <div class="col-six tab-full left">
+            <div class="timeline">
 
-            <div class="col-full text-center">
-                <h3>Education</h3>
-            </div>
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2019 - Present</p>
+                    <h3>PhD Computer Science</h3>
+                    <h5>University of West London</h5>
+                  </div>
+                <div class="timeline__desc">
+                  <p>Recipient of Vice Chancellor’s PhD scholarship</p>
+                </div>
+              </div>
 
-            <div class="col-six tab-full left">
-                <div class="timeline">
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2018 - September 2019</p>
+                    <h3>MSc Software Engineering</h3>
+                    <h5>University of West London</h5>
+                  </div>
+                <div class="timeline__desc">
+                    <p>Graduated with Distinction</p>
+                </div>
+              </div>
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2019 - Present</p>
-                            <h3>PhD Computer Science</h3>
-                            <h5>University of West London</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Recipient of Vice Chancellor’s PhD scholarship</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+            </div> <!-- end timeline -->
+          </div> <!-- end left -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2018 - September 2019</p>
-                            <h3>MSc Software Engineering</h3>
-                            <h5>University of West London</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Graduated with Distinction</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+          <div class="col-six tab-full right">
+            <div class="timeline">
 
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2011 - September 2012</p>
+                    <h3>M-Level Post-Graduate Certificate of Education (PGCE), Computer Science</h3>
+                    <h5>University of Southampton</h5>
+                  </div>
+                  <div class="timeline__desc">
+                    <p>Awarded Qualified Teacher Status (QTS)</p>
+                  </div>
+              </div>
 
-            <div class="col-six tab-full right">
-                <div class="timeline">
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2004 - September 2007</p>
+                    <h3>BA Hons Management Studies</h3>
+                    <h5>University of York St. John</h5>
+                  </div>
+              </div>
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2011 - September 2012</p>
-                            <h3>M-Level Post-Graduate Certificate of Education (PGCE), Computer Science</h3>
-                            <h5>University of Southampton</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>Awarded Qualified Teacher Status (QTS)</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2004 - September 2007</p>
-                            <h3>BA Hons Management Studies</h3>
-                            <h5>University of York St. John</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
+            </div> <!-- end timeline -->
+          </div> <!-- end right -->
 
         </div> <!-- end about-content timeline -->
 
-        <div class="row about-content about-content--timeline education has-bottom-sep">
+        <div class="horizontal">
+          <hr class="mx-auto">
+        </div>
 
-            <div class="col-full text-center">
-                <h3>Professional Experience</h3>
-            </div>
+        <div class="row about-content about-content--timeline education ">
 
-            <div class="col-six tab-full left">
-                <div class="timeline">
+          <div class="col-full text-center">
+            <h3>Professional Experience</h3>
+          </div>
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2019 - Present</p>
-                            <h3>Research & Teaching Assistant</h3>
-                            <h5>University of West London</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>• Lecture undergraduate students in AI and ML</p>
-                            <p>• Mentor junior PhD candidates in growing both their technical and collaborative skills</p>
-                            <p>• Represent research group at University & external events</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+          <div class="col-six tab-full left">
+            <div class="timeline">
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">October 2019 - Present</p>
-                            <h3>Teacher of Computing (part-time)</h3>
-                            <h5>The Godolphin and Latymer School</h5>
-                        </div>
-                        <div class="timeline__desc">
-                          <p>• Assist in the delivery of technical specification content</p>
-                          <p>• Supervise development of full‐stack web application A‐Level project</p>
-                          <p>• Teach python programming to girls aged 11‐18</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2019 - Present</p>
+                    <h3>Research & Teaching Assistant</h3>
+                    <h5>University of West London</h5>
+                  </div>
+                <div class="timeline__desc">
+                    <p>• Lecture undergraduate students in AI and ML</p>
+                    <p>• Mentor junior PhD candidates in growing both their technical and collaborative skills</p>
+                    <p>• Represent research group at University & external events</p>
+                </div>
+              </div>
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">March 2018 - September 2019</p>
-                            <h3>Head of Computing</h3>
-                            <h5>The Marist School, Ascot</h5>
-                        </div>
-                        <div class="timeline__desc">
-                          <p>• Lead Computing department and manage staff</p>
-                          <p>• Responsible for whole‐school STEM strategy</p>
-                          <p>• Plan and deliver extra‐curricular and community outreach initiatives</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">October 2019 - Present</p>
+                    <h3>Teacher of Computing (part-time)</h3>
+                    <h5>The Godolphin and Latymer School</h5>
+                  </div>
+                  <div class="timeline__desc">
+                    <p>• Assist in the delivery of technical specification content</p>
+                    <p>• Supervise development of full‐stack web application A‐Level project</p>
+                    <p>• Teach python programming to girls aged 11‐18</p>
+                  </div>
+              </div>
 
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">March 2018 - September 2019</p>
+                    <h3>Head of Computing</h3>
+                    <h5>The Marist School, Ascot</h5>
+                  </div>
+                  <div class="timeline__desc">
+                    <p>• Lead Computing department and manage staff</p>
+                    <p>• Responsible for whole‐school STEM strategy</p>
+                    <p>• Plan and deliver extra‐curricular and community outreach initiatives</p>
+                  </div>
+              </div>
 
-            <div class="col-six tab-full right">
-                <div class="timeline">
+            </div> <!-- end timeline -->
+          </div> <!-- end left -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2014 - March 2018</p>
-                            <h3>Computing Co-ordinator</h3>
-                            <h5>Queen's College, Harley Street</h5>
-                        </div>
-                        <div class="timeline__desc">
-                          <p>• Introduce Computer Science and STEM to the school</p>
-                          <p>• Lead the department and staff IT training</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+          <div class="col-six tab-full right">
+            <div class="timeline">
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">September 2012 - September 2014</p>
-                            <h3>Teacher of Computing</h3>
-                            <h5>Bohunt School, Hampshire</h5>
-                        </div>
-                        <div class="timeline__desc">
-                          <p>• Plan and deliver inspiring Computing schemes of work</p>
-                          <p>• Run extra‐curricular clubs</p>
-                        </div>
-                    </div> <!-- end timeline__block -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2014 - March 2018</p>
+                    <h3>Computing Co-ordinator</h3>
+                    <h5>Queen's College, Harley Street</h5>
+                  </div>
+                  <div class="timeline__desc">
+                    <p>• Introduce Computer Science and STEM to the school</p>
+                    <p>• Lead the department and staff IT training</p>
+                  </div>
+              </div>
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">August 2007 - September 2011</p>
-                            <h3>Sustainability Consultant</h3>
-                            <h5>The FES Group, York</h5>
-                        </div>
-                        <div class="timeline__desc">
-                          <p>• Assessment of building energy efficiency in the residential and domestic sectors</p>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                        </div>
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">September 2012 - September 2014</p>
+                    <h3>Teacher of Computing</h3>
+                    <h5>Bohunt School, Hampshire</h5>
+                  </div>
+                  <div class="timeline__desc">
+                    <p>• Plan and deliver inspiring Computing schemes of work</p>
+                    <p>• Run extra‐curricular clubs</p>
+                  </div>
+              </div>
 
-                    </div> <!-- end timeline__block -->
+              <div class="timeline__block">
+                <div class="timeline__bullet"></div>
+                  <div class="timeline__header">
+                    <p class="timeline__timeframe">August 2007 - September 2011</p>
+                    <h3>Sustainability Consultant</h3>
+                    <h5>The FES Group, York</h5>
+                  </div>
+                <div class="timeline__desc">
+                  <p>• Assessment of building energy efficiency in the residential and domestic sectors</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+              </div>
 
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
-
+            </div> <!-- end timeline -->
+          </div> <!-- end right -->
         </div> <!-- end about-content timeline -->
+
+        <div class="horizontal">
+          <hr class="mx-auto">
+        </div>
 
         <div class="row technical-skills">
           <div>
-                <h1>Publications & Conferences</h1>
+            <h1>Publications & Conferences</h1>
           </div>
         </div>
 
-          <div class="container">
-            <div class="row">
-                <h5 class="publication"><b>Multibeat echocardiographic phase detection using deep neural networks</b></h5>
-                <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
-                  Massoud Zolgharni</i></h5>
-                <h5 class="publication"><b>Computers in Biology & Medicine, 2021</b></h5>
-              </div>
-              <br>
-              <div class="row">
-                  <h5 class="publication"><b>Echocardiographic Phase Detection Using Neural Networks</b></h5>
-                  <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
-                    Massoud Zolgharni</i></h5>
-                  <h5 class="publication"><b>MIDL Conference, 2021</b></h5>
-                </div>
-                <br>
-                <div class="row">
-                    <h5 class="publication"><b>Neural architecture search of echocardiography view classifiers,</b></h5>
-                    <h5 class="publication"><i>Neda Azarmehr, Xujiong Ye, James P Howard, Elisabeth S Lane, Matthew J Shun‐Shin, Graham D Cole, Luc Bidaut, Darrel P Francis, Massoud
-                      Zolgharni</i></h5>
-                    <h5 class="publication"><b>Journal of Medical Imaging, 2021</b></h5>
-                  </div>
-                  <br>
-                  <div class="row">
-                      <h5 class="publication"><b>Automated Multibeat Tissue Doppler Echocardiography Analysis Using Deep Neural Networks,</b></h5>
-                      <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
-                        Massoud Zolgharni</i></h5>
-                      <h5 class="publication"><b>Computers in Biology & Medicine, 2021 [Submitted]</b></h5>
-                    </div>
-                    <br>
-                    <br>
+        <div class="container">
+
+          <div class="row">
+            <h5 class="publication"><b>Multibeat echocardiographic phase detection using deep neural networks</b></h5>
+            <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
+              Massoud Zolgharni</i></h5>
+            <h5 class="publication"><b>Computers in Biology & Medicine, 2021</b></h5>
+          </div>
+
+          <br>
+          <div class="row">
+            <h5 class="publication"><b>Echocardiographic Phase Detection Using Neural Networks</b></h5>
+            <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
+              Massoud Zolgharni</i></h5>
+            <h5 class="publication"><b>MIDL Conference, 2021</b></h5>
+          </div>
+
+          <br>
+          <div class="row">
+            <h5 class="publication"><b>Neural architecture search of echocardiography view classifiers,</b></h5>
+            <h5 class="publication"><i>Neda Azarmehr, Xujiong Ye, James P Howard, Elisabeth S Lane, Matthew J Shun‐Shin, Graham D Cole, Luc Bidaut, Darrel P Francis, Massoud
+              Zolgharni</i></h5>
+            <h5 class="publication"><b>Journal of Medical Imaging, 2021</b></h5>
             </div>
 
+            <br>
+            <div class="row">
+              <h5 class="publication"><b>Automated Multibeat Tissue Doppler Echocardiography Analysis Using Deep Neural Networks,</b></h5>
+              <h5 class="publication"><i>Elisabeth S Lane, Neda Azarmehr, Jevgeni Jevsikov, James P Howard, Matthew J Shun‐Shin, Graham D Cole, Darrel P Francis,
+                Massoud Zolgharni</i></h5>
+              <h5 class="publication"><b>Computers in Biology & Medicine, 2021 [Submitted]</b></h5>
+            </div>
+            <br>
+            <br>
 
-        </div>
+          </div>
+
 
         <div class="row centre">
-
-            <div>
-                <a href="#" onclick='window.open("https://drive.google.com/file/d/1wOjEdL1yMAw3CBNrXxhffxFIUrD0vQCa/view?usp=sharing");return false;' class="btn btn--primary">Download Curriculum Vitae</a>
-            </div>
-
-        </div> <!-- end about-content buttons -->
+          <div>
+            <a href="#" onclick='window.open("static/docs/ELaneCV.pdf");return false;' class="btn btn--primary">Download Curriculum Vitae</a>
+          </div>
+        </div>
 
     </section> <!-- end about -->
-
 
     <!-- works
     ================================================== -->
     <section id="works" class="s-works target-section">
 
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3>Portfolio</h3>
-                <h1>Coming Soon...</h1>
-
-              </div>
+      <div class="container">
+        <div class="row narrow section-intro ">
+          <div class="col-full">
+            <h3>Portfolio</h3>
+            <h1>My Projects</h1>
+          </div>
         </div>
+      </div>
 
+      <div class="container">
+        <div class="row">
 
-    </section> <!-- end works -->
+          <div class="col-9 col-md-6 col-lg-4 col-xl-4 d-flex">
+            <div class="icon-box">
+              <div class="icon">
+                <a href="projects/phase_detection.html">
+                  <img src="static/images/phase_detection/heart-beat.png" alt="Project icon" class="project-img">
+                </a>
+              </div>
+              <h2><a href="projects/phase_detection.html">Phase Detection</a></h2>
+              <p>Multibeat echocardiographic phase detection</p>
+            </div>
+          </div>
 
+          <div class="col-9 col-md-6 col-lg-4 col-xl-4 d-flex">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <a href="#0">
+                <img src="static/images/coming_soon.jpg" alt="Coming soon icon" class="project-img">
+                </a>
+              </div>
+              <h2><a href="#0">New Project Coming Soon...</a></h2>
+              <p>Coming soon...</p>
+            </div>
+          </div>
 
+          <div class="col-9 col-md-6 col-lg-4 col-xl-4 d-flex">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <a href="#0">
+                <img src="static/images/coming_soon.jpg" alt="Coming soon icon" class="project-img">
+                </a>
+              </div>
+              <h2><a href="#0">New Project Coming Soon...</a></h2>
+              <p>Coming soon...</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section> <!-- end projects -->
 
     <!-- blog
     ================================================== -->
     <section id="blog" class="s-blog target-section">
 
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3>Blog</h3>
-                <h1>Coming Soon...</h1>
-            </div>
+      <div class="row narrow section-intro ">
+        <div class="col-full">
+          <h3>Blog</h3>
+          <h1>Latest Blog Posts</h1>
         </div>
+      </div>
+
+      <div class="row blog-content">
+        <div class="col-full">
+          <div class="blog-list block-1-2 block-tab-full">
+
+            <article class="col-block">
+              <div class="blog-date">
+                <a href="blog/blog-1-pacsDataset.html">December 2, 2021</a>
+              </div>
+              <h2 class="h01"><a href="blog/blog-1-pacsDataset.html">Echocardiographic Video Dataset for Phase Detection</a></h2>
+              <p>I am delighted to offer researchers the opportunity to download and use one of the previously private A4C echo video datasets used in my study titled "Multibeat echocardiographic phase detection using deep neural networks".</p>
+              <div class="blog-cat">
+                <a href="https://machinelearningmastery.com/what-is-deep-learning/">Deep Learning</a><a href="https://www.nhs.uk/conditions/echocardiogram/">Echocardiography</a>
+              </div>
+            </article>
+
+          </div> <!-- end blog-list -->
+        </div> <!-- end col-full -->
+      </div> <!-- end blog-content -->
 
     </section> <!-- end s-blog -->
-
-
-
 
     <!-- footer
     ================================================== -->
     <footer>
-        <div class="row footer-bottom">
 
-                <div class="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-        </div> <!-- end footer-bottom -->
+      <div class="row footer-bottom">
+        <div class="go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+        </div>
+      </div> <!-- end footer-bottom -->
 
     </footer> <!-- end footer -->
 
@@ -425,38 +488,40 @@
     ================================================== -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
 
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
 
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+              <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+              "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+              "Zoom in/out"></button>
+              <div class="pswp__preloader">
+                  <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                      </div>
+                  </div>
+              </div>
             </div>
 
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+            "Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
             </div>
 
         </div>
+
+      </div>
 
     </div><!-- end photoSwipe background -->
 
@@ -467,9 +532,9 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/main.js"></script>
 
 </body>
 

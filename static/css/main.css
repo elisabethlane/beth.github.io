@@ -1,59 +1,4 @@
 /* ===================================================================
- *
- *  Hola v1.0 Main Stylesheet
- *  10-02-2017
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # webfonts and iconfonts
- *  # base style overrides
- *      ## links
- *  # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- *      ## pace.js styles - minimal
- *  # forms
- *      ## style placeholder text
- *      ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *      ## alert box
- *      ## additional typo styles
- *      ## skillbars
- *  # common and reusable theme styles
- *      ## section intro
- *      ## blog-list
- *  # header styles
- *      ## header logo
- *      ## mobile menu toggle
- *      ## navigation
- *  # home
- *      ## home content
- *      ## home social
- *      ## home animations
- *  # about
- *      ## timeline
- *  # works
- *      ## bricks/masonry
- *  # testimonials
- *  # blog
- *  # cta
- *  # stats
- *  # contact
- *  # footer
- *      ## go to top
- *  # blog styles
- *      ## blog page header
- *      ## blog content
- *      ## comments
- *
- * =================================================================== */
-
-
-/* ===================================================================
  * # webfonts and iconfonts - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- */
@@ -92,7 +37,14 @@ body {
     padding: 0;
 }
 
+hr{
+  width: 40%;
+}
 
+.horizontal{
+  margin-bottom: 40px;
+  margin-top: 5px;
+}
 /* -------------------------------------------------------------------
  * ## links - (_document-setup.scss)
  * ------------------------------------------------------------------- */
@@ -411,28 +363,37 @@ dd {
 }
 
 
-/* -------------------------------------------------------------------
- * ## responsive video container - (_document-setup)
- * ------------------------------------------------------------------- */
+/*project*/
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+.icon-box {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  background: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed,
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.icon-box .icon {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
+.icon-box .icon .project-img{
+  height:200px;
+  width:250px;
+}
+
+.icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
 
 /* -------------------------------------------------------------------
  * ## floated image - (_document-setup)
@@ -1016,20 +977,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     content: counter(definitions, decimal) ". ";
 }
 
-
-/**
- * Pull Quotes
- * -----------
- * markup:
- *
- * <aside class="pull-quote">
- *		<blockquote>
- *			<p></p>
- *		</blockquote>
- *	</aside>
- *
- * --------------------------------------------------------------------- */
-
 .pull-quote {
     position: relative;
     padding: 2.1rem 3rem 2.1rem 0px;
@@ -1062,20 +1009,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .pull-quote blockquote:before {
     content: none;
 }
-
-
-/**
- * Stats Tab
- * ---------
- * markup:
- *
- * <ul class="stats-tabs">
- *		<li><a href="#">[value]<em>[name]</em></a></li>
- *	</ul>
- *
- * Extend this object into your markup.
- *
- * --------------------------------------------------------------------- */
 
 .stats-tabs {
     padding: 0;
@@ -1131,9 +1064,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-
-
-
 /* ===================================================================
  * # common and reusable theme styles  - (_common-styles.scss)
  *
@@ -1174,18 +1104,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-bottom: 0;
 }
 
-.section-intro.has-bottom-sep {
-    padding-bottom: 1.5rem;
-    position: relative;
-}
-
-.section-intro.has-bottom-sep::after {
-    display: inline-block;
-    height: 1px;
-    width: 240px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
 .key-skills {
     text-align: center;
@@ -1197,20 +1115,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 3rem;
     line-height: 1.375;
     margin-top: 0;
-}
-
-
-.key-skills.has-bottom-sep {
-    padding-bottom: 1.5rem;
-    position: relative;
-}
-
-.key-skills.has-bottom-sep::after {
-    display: inline-block;
-    height: 1px;
-    width: 240px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .technical-skills {
@@ -1235,35 +1139,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .technical-skills p{
   font-size: 1.8rem;
 }
-
-
-.technical-skills.has-bottom-sep {
-    padding-bottom: 1.5rem;
-    position: relative;
-}
-
-.technical-skills.has-bottom-sep::after {
-    display: inline-block;
-    height: 1px;
-    width: 240px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.education.has-bottom-sep {
-    padding-bottom: 1.5rem;
-    position: relative;
-    text-align: center;
-}
-
-.education.has-bottom-sep::after {
-    display: inline-block;
-    height: 1px;
-    width: 240px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
 
 /* -------------------------------------------------------------------
  * responsive:
@@ -1417,7 +1292,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         font-size: 2.7rem;
     }
 }
-
 
 
 /* ===================================================================
@@ -1682,7 +1556,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         display: block !important;
     }
 }
-
 
 
 /* ===================================================================
@@ -3040,9 +2913,6 @@ html.no-csstransitions .home-content__main {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.s-contact .section-intro.has-bottom-sep::after {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
 .s-contact .form-field {
     position: relative;
@@ -3446,6 +3316,348 @@ footer a:hover, footer a:focus {
         font-size: 2.2rem;
     }
 }
+
+
+
+
+
+
+
+
+
+/* ===================================================================
+ * # Project
+ *
+ * ------------------------------------------------------------------- */
+
+article.project {
+    background-color: #FFFFFF;
+}
+
+article.project-content {
+    padding-top: 7.2rem;
+    padding-bottom: 12rem;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## project page header
+ * ------------------------------------------------------------------- */
+
+.project-header {
+    background-color: black;
+    padding-top: 20.4rem;
+    padding-bottom: 7.2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    position: relative;
+    min-height: 50.4rem;
+}
+
+.project-header__content {
+    position: relative;
+    background-color: black;
+}
+
+.project-header__title p{
+    color: #FFFFFF;
+    position: relative;
+    font-family: "librebaskerville-bold", serif;
+    line-height: 1.227;
+    margin-top: 0;
+    margin-bottom: 3.6rem;
+    font-size: 5rem;
+}
+
+.project-header__title .project-authors p{
+  color: #FFFFFF;
+  position: relative;
+  font-family: "librebaskerville-bold", serif;
+  margin-top: 0;
+  margin-bottom: 3.6rem;
+  font-size: 2rem;
+}
+
+.project-header__title .affiliation p{
+  color: #FFFFFF;
+  position: relative;
+  font-family: "librebaskerville-bold", serif;
+  margin-top: 0;
+  margin-bottom: 3.6rem;
+  font-size: 1.5rem;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * project page header
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+    .project-header__content {
+        max-width: 800px;
+        font-size: 1.7rem;
+    }
+
+    .project-header__title {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .project-header__content {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .project-header--single {
+        padding-top: 18rem;
+    }
+    .project-header__title {
+        font-size: 5.4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project-header {
+        padding-top: 18rem;
+    }
+    .project-header__content p {
+        padding-right: 0;
+    }
+    .project-header__title {
+        font-size: 4.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .project-header__title {
+        font-size: 4.2rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .project-header__content {
+        font-size: 1.6rem;
+        line-height: 1.875;
+    }
+    .project-header__title {
+        font-size: 3.8rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * ## project content
+ * ------------------------------------------------------------------- */
+
+.project-content {
+    background-color: #FFFFFF;
+    padding-top: 1rem;
+}
+
+.project-content__main {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    background-color: #FFFFFF;
+}
+
+.project-content__main h1{
+    font-family: "librebaskerville-bold", serif;
+    font-size: 2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.project-content__main p{
+  font-family: "librebaskerville", serif;
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #404040;
+}
+
+.project-content__main .project-img{
+  display: flex;
+  justify-content: center;
+}
+
+.project-content__main .project-img img{
+  width:40%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.project-content__main .project-img-lg{
+  display: flex;
+  justify-content: center;
+}
+
+.project-content__main .project-img-lg img{
+  width:50%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.project-content__main .contact-form{
+  display: flex;
+  justify-content: center;
+}
+
+.project-content__main .contact-form .form-element{
+  width: 500px;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * project content
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+    .project-content {
+        max-width: 900px;
+    }
+    .project-content__main {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .project-content__main img {
+        max-width: 900px;
+        margin: 3rem 0 3rem -5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-content {
+        max-width: 800px;
+    }
+    .project-content__main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .project-content__main img {
+        max-width: 800px;
+        margin: 3rem 0 3rem -4rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .project-content__main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .project-content__main img {
+        max-width: 100%;
+        margin: 3rem 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .project-content__nav {
+        padding-right: 0;
+    }
+    .project-content__all {
+        position: static;
+        text-align: left;
+        width: auto;
+        margin-top: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project-content__main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .project-content__main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* project form */
+
+.project-content__main .project__form {
+  display: flex;
+  justify-content: center;
+}
+
+.project-content__main .project__form form{
+  width: 75%;
+  height: auto;
+}
+
+.project-content__main .form-field .form-control{
+  width: 100%;
+}
+
+.project-content__main .form-field label {
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    position: absolute;
+    bottom: -0.3rem;
+    right: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 0 2rem;
+    margin: 0;
+    color: #FFFFFF;
+    background: #862121;
+}
+
+
+.project__form input[type="email"],
+.project__form input[type="text"],
+.project__form textarea {
+    background-color: #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    margin-bottom: .9rem;
+    color: black;
+}
+
+.project__form button {
+    margin-top: 4.2rem;
+    background-color: #862121;
+    border-color: #862121;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
