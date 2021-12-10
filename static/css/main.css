@@ -3479,24 +3479,35 @@ article.project-content {
   color: #404040;
 }
 
-.project-content__main .project-img{
+.project-img{
   display: flex;
   justify-content: center;
 }
 
-.project-content__main .project-img img{
+.project-img img{
   width:40%;
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
-.project-content__main .project-img-lg{
+.project-img-lg{
   display: flex;
   justify-content: center;
 }
 
-.project-content__main .project-img-lg img{
+.project-img-lg img{
   width:50%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.project-img-sm{
+  display: flex;
+  justify-content: center;
+}
+
+.project-img-sm img{
+  width:20%;
   margin-top: 5rem;
   margin-bottom: 2rem;
 }

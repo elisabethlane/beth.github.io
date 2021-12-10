@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>TDI</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/vendor.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../static/js/modernizr.js"></script>
+    <script src="../static/js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../index.html" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="../index.html#home" title="home">Home</a></li>
+                <li><a href="../index.html#about" title="about">Curriculum Vitae</a></li>
+                <li class="current"><a href="../index.html#works" title="works">Projects</a></li>
+                <li><a href="../index.html#blog" title="blog">Blog</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="project">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="project-header">
+
+            <div class="project-header__content">
+
+                <article>
+
+                    <h1 class="project-header__title">
+                      <p>Automated Multibeat Tissue Doppler Echocardiography Analysis Using Deep Neural Networks</p>
+                      <div class="project-authors">
+                      <p><i>Elisabeth S Lane <sup>1</sup>, Neda Azarmehr <sup>2</sup>, Jevgeni Jevsikov <sup>1</sup>, James P Howard <sup>2</sup>, Matthew J Shun-shin <sup>2</sup>, Graham D Cole <sup>2</sup>, Darrel P Francis <sup>2</sup>, Massoud Zolgharni <sup>1,2</sup><i></p>
+                      </div>
+                      <div class="affiliation">
+                      <p><sup>1</sup> School of Computing and Engineering, University of West London, London, United Kingdom</p>
+                      <p><sup>2</sup> National Heart and Lung Institute, Imperial College, London, United Kingdom</p>
+                    </div>
+                    </h1>
+
+                </article>
+
+            </div>
+
+        </div> <!-- end page-header -->
+
+        <div class="project-content">
+
+            <div class="project-content__main">
+                <h1>I have developed a network capable of accurately detecting multiple heartbeats and S', E' and A' key points for each from variable length tissue doppler imaging strips.</h1>
+
+                <div class="project-img">
+                  <img src="../static/images/tdi/tdi_img.png" alt="example_tdi_img">
+                </div>
+
+                <br>
+                <a href="#0" class="btn btn--primary">
+                     Download the paper
+                </a><br><br>
+
+                <p>Tissue Doppler Imaging (TDI) is an important echocardiographic technique for the non-invasive assessment of myocardial blood velocity. Often used to measure global and regional myocardial diastolic and systolic function, right and left ventricular (LV) function and general cardiac performance, recent studies report TDI measurements as a useful prognostic and diagnostic tool. Including, but not limited to, including LV systolic and diastolic dysfunction and right ventricular and atrial function.<p>
+                <p>TDI acquisition and interpretation is manually performed by trained operators who visually localise pixels representing S’, E’ and A’ peak velocities and trace the Doppler curve by hand. Measurements can be taken at the middle or edge of the envelope; however, controversy and debate surround the most reproducible strategy. Research has shown peak velocity measurements obtained from the middle of the Doppler envelope to be more consistent with expert visual assessment and in close agreement with representative true tissue velocity, as opposed to the alternatives (edge and inner edge).
+                Current clinical guidelines recommend peak velocity measurements are averaged over a minimum of three consecutive beats for improved accuracy. However, this manual process is time-consuming and highly disruptive to workflow. Echocardiographers have been shown to select beats they consider an average representative sample which may contribute significantly to test-retest variability.</p>
+
+                <h1>Dataset</h1>
+                <p>Pulsed-wave tissue Doppler traces were acquired from 48 patients, in sinus rhythm, with a mean age of 64±11 years old, who underwent a standard tissue Doppler examination at Imperial College Healthcare NHS Trust, London. No additional exclusion criteria were specified. The study was approved by the local ethics committee and written informed consent was obtained.</p>
+                <p>In total, six 30 second recordings were acquired for each patient (an equal mix of septal and lateral) and reconstructed (using a bespoke MatLab script) into a continuous Doppler strip with a resolution of 900 x 1300 pixels. The original image was cropped to include only the Doppler trace and the horizontal zero-velocity axis was automatically detected by averaging across every horizontal row in the image and selecting the one with the highest mean intensity. Additionally, optical character recognition was used to locate the velocity scales (cm/s) and time axes in seconds for each Doppler trace.</p>
+                <p>Complete beats, for which both operators annotated systolic and diastolic peak velocities (S’, E’ and A’) at the centre of the Doppler envelope, were selected. In total, the dataset comprised 280 Doppler strips (5,327 beats). For the definition of ground truth labels, the consensus of the two human operators was calculated.</p>
+
+                <h1>Network Architecture</h1>
+                <p>The network consists of a two-stage beat detection and key point localisation model:</p>
+
+                <div class="project-img">
+                  <img src="../static/images/tdi/tdi_network.png" alt="tdi_network">
+                </div>
+
+                <p>Detection of complete beats from the reconstructed tissue Doppler strips is performed by a Mask R-CNN implementation, originally developed by Facebook AI Research (FAIR). A third-party implementation of Mask R-CNN code written by Matterport was updated to Tensorflow 2.0 by the authors and extended for use in this study.</p>
+                <p>The Mask R-CNN approach builds upon the Faster R-CNN network by efficiently detecting objects in an image with the benefit of the ROIAlign module for improved performance and can produce an object segmentation mask in parallel with the existing bounding box branch. A mask is not required for this study; however, it has future potential for extending the proposed network. Each beat is recognised, localised and, finally, classified.</p>
+                <p>The CNN backbone used for the extraction of a spatial feature vector is ResNet101, initialised with pre-trained weights from the large-scale object detection and segmentation COCO dataset. Images are resized and zero padded to get a square image of 1024x1024 pixels for compatibility with the network and to maintain important spatial information. A high-level illustration of the Mask R-CNN implementation can be found in the figure below.</p>
+
+                <div class="project-img-lg">
+                  <img src="../static/images/tdi/mask_rcnn.png" alt="mask_r-cnn_overview">
+                </div>
+
+                <p>After successfully detecting each beat, the region of interest is cropped from the input, capturing the entire y-axis and taking x-axis coordinates from the Mask R-CNN bounding box prediction. The cropped image is resized to 192 x 192 pixels and processed through a two-stage convolutional heatmap regression model to eventually predict cartesian coordinates for systolic and diastolic peak velocities (S’, E’ and A’).</p>
+
+                <p>The two-stage heatmap regression architecture was inspired by convolutional pose machines (CPM) for anatomical landmark localisation. The network consists of two convolutional stages, each producing a 2-dimensional belief map with increasingly refined estimates representing the location of the target key points. The input of the second stage is the output image features and belief map of the first. The overall proposed two-stage network was trained in an end-to-end manner using backpropagation.</p>
+                <p>The sequential nature of the heatmap architecture avoids the problem of vanishing gradients by refreshing the gradients at the end of each stage whilst, in parallel, guiding the network to output increasingly more accurate belief maps through local supervision via an intermediate loss function at the output of each stage; minimising the distance between the predicted and target belief maps for each Doppler velocity (S’, E’, A). An illustration of the architecture can be found in the figure below:</p>
+
+                <div class="project-img-lg">
+                  <img src="../static/images/tdi/heatmap_regression.png" alt="heatmap_regression">
+                </div>
+
+                <p>The image below illustrates the entire proposed network:
+
+                <div class="project-img-sm">
+                  <img src="../static/images/tdi/network.png" alt="combined_network">
+                </div>
+
+                <h1>Results and Discussion</h1>
+                <p>Coming soon...</p><br><br>
+
+              <p>If you have any questions about this work, please email Elisabeth.Lane@uwl.ac.uk</p><br><br><br>
+
+            </article>
+          <!-- footer
+          ================================================== -->
+          <footer>
+                  <div class="row">
+                      <div class="col-full">
+
+                          <ul class="footer-social">
+                              <li>
+                                  <a href="#" onclick='window.open("https://www.linkedin.com/in/beth-lane/");return false;'><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" onclick='window.open("https://github.com/elisabethlane");return false;'><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
+                              </li>
+                              <li>
+                                  <a href="#" onclick='window.open("https://scholar.google.com/citations?user=lIVUuT8AAAAJ");return false;'><i class="im im-pencil" aria-hidden="true"></i><span>Google Scholar</span></a>
+                              </li>
+                          </ul>
+
+                      </div>
+                  </div>
+
+          </footer> <!-- end footer -->
+
+
+          <div id="preloader">
+              <div id="loader"></div>
+          </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/static/js/plugins.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
