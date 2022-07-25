@@ -68,11 +68,12 @@
                             Automated Multibeat Tissue Doppler Echocardiography Analysis Using Deep Neural Networks
                         </a><p>
                         <div class="project-authors">
-                          <p><i>Elisabeth S Lane <sup>1</sup>, Neda Azarmehr <sup>2</sup>, Jevgeni Jevsikov <sup>1</sup>, James P Howard <sup>2</sup>, Matthew J Shun-shin <sup>2</sup>, Graham D Cole <sup>2</sup>, Darrel P Francis <sup>2</sup>, Massoud Zolgharni <sup>1,2</sup><i></p>
+                          <p><i>Elisabeth S Lane <sup>1</sup>, Jevgeni Jevsikov <sup>2</sup>, Matthew J Shun-shin <sup>2</sup>,  Niti Dhutia <sup>3</sup>, Graham D Cole <sup>2</sup>, Darrel P Francis <sup>2</sup>, Massoud Zolgharni <sup>1,2</sup><i></p>
                         </div>
                         <div class="affiliation">
                             <p><sup>1</sup> School of Computing and Engineering, University of West London, London, United Kingdom</p>
                             <p><sup>2</sup> National Heart and Lung Institute, Imperial College, London, United Kingdom</p>
+                            <p><sup>3</sup> New York University Abu Dhabi, Saadiyat Island, Abu Dhabi, United Arab Emirates</p>
                       </div>
                     </h1>
 
@@ -84,20 +85,18 @@
         <div class="project-content">
 
             <div class="col-full project-content__main">
-                <h1>I have developed a network capable of accurately detecting multiple heartbeats and S', E' and A' key points for each from variable length tissue doppler imaging strips.</h1>
 
-                <div class="project-img">
-                  <img src="../static/images/tdi/tdi_img.png" alt="example_tdi_img">
-                </div>
-
-                <br>
-                <a href="#0" class="btn btn--primary">
-                     Download the paper
-                </a><br><br>
+              <br><a href="#" onclick='window.open("../static/docs/MIDL_2022.pdf");return false;' download="Automated Multibeat Tissue Doppler Echocardiography Analysis Using Deep Neural Networks" class="btn btn--primary">
+                   Download the MIDl 2022 conference paper
+              </a><br><br>
 
                 <p>Tissue Doppler Imaging (TDI) is an important echocardiographic technique for the non-invasive assessment of myocardial blood velocity. Often used to measure global and regional myocardial diastolic and systolic function, right and left ventricular (LV) function and general cardiac performance, recent studies report TDI measurements as a useful prognostic and diagnostic tool. Including, but not limited to, including LV systolic and diastolic dysfunction and right ventricular and atrial function.<p>
                 <p>TDI acquisition and interpretation is manually performed by trained operators who visually localise pixels representing S’, E’ and A’ peak velocities and trace the Doppler curve by hand. Measurements can be taken at the middle or edge of the envelope; however, controversy and debate surround the most reproducible strategy. Research has shown peak velocity measurements obtained from the middle of the Doppler envelope to be more consistent with expert visual assessment and in close agreement with representative true tissue velocity, as opposed to the alternatives (edge and inner edge).
                 Current clinical guidelines recommend peak velocity measurements are averaged over a minimum of three consecutive beats for improved accuracy. However, this manual process is time-consuming and highly disruptive to workflow. Echocardiographers have been shown to select beats they consider an average representative sample which may contribute significantly to test-retest variability.</p>
+
+                <div class="project-img">
+                  <img src="../static/images/tdi/peak_velocities.png" alt="peak_velocities">
+                </div>
 
                 <h1>Dataset</h1>
                 <p>Pulsed-wave tissue Doppler traces were acquired from 48 patients, in sinus rhythm, with a mean age of 64±11 years old, who underwent a standard tissue Doppler examination at Imperial College Healthcare NHS Trust, London. No additional exclusion criteria were specified. The study was approved by the local ethics committee and written informed consent was obtained.</p>
@@ -126,12 +125,6 @@
 
                 <div class="project-img-lg">
                   <img src="../static/images/tdi/heatmap_regression.png" alt="heatmap_regression">
-                </div>
-
-                <p>The image below illustrates the entire proposed network:
-
-                <div class="project-img-sm">
-                  <img src="../static/images/tdi/network.png" alt="combined_network">
                 </div>
 
                 <h1>Results and Discussion</h1>
